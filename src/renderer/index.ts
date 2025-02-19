@@ -1,27 +1,16 @@
+import {} from '../../LiteLoaderQQNT-Euphony/src/index'
+import { log } from '../utils/log';
 
-export const onSettingWindowCreated = (view: HTMLElement) => {
-  console.log('Setting window has just been created');
+log('init renderer');
 
-  let clickCount = 0;
-  const domParser = new DOMParser();
-  const doms = domParser.parseFromString([
-    '<div>',
-    '<h1>Hello world!</h1>',
-    '<button id="template-count">Count: 0</button>',
-    '<button id="template-greet">Greet as Misa</button>',
-    '</div>',
-  ].join(''), 'text/html');
+export const onSettingWindowCreated = async (view: HTMLElement) => {
+// @ts-expect-error: 该第三方库类型定义不完整，需要强制调用
+  const plugin_path = LiteLoader.plugins.LiteLoaderQQNT_SDWebUI_ImageQuickSend.path.plugin;
+  const pages_path = `local:///${plugin_path}/pages/settings.html`;
+  view.innerHTML = await (await fetch(pages_path)).text();
 
-  (doms.body.querySelector('#template-count') as HTMLButtonElement).addEventListener('click', (e) => {
-    clickCount++;
-    (e.target as HTMLButtonElement).innerHTML = `Count: ${clickCount}`;
-  });
-
-  (doms.body.querySelector('#template-greet') as HTMLButtonElement).addEventListener('click', () => {
-    SDWebUIImageQuickSend.greeting('Misa');
-  });
-
-  doms.body.childNodes.forEach((dom) => {
-    view.appendChild(dom);
+  (view.querySelector('#github') as HTMLButtonElement).addEventListener('click', () => {
+    // @ts-expect-error: 该第三方库类型定义不完整，需要强制调用
+    LiteLoader.api.openExternal('https://github.com/yalwolf/LiteLoaderQQNT-SDWebUI-ImageQuickSend');
   });
 };

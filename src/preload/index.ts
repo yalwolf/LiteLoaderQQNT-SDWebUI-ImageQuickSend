@@ -1,7 +1,7 @@
 import { contextBridge, ipcRenderer } from 'electron';
 
-contextBridge.exposeInMainWorld('LLTemplate_Vite', {
+contextBridge.exposeInMainWorld('SDWebUIImageQuickSend', {
   greeting: (name: string) => {
-    ipcRenderer.send('LLTemplate-Vite.Greeting', name);
+    ipcRenderer.send('SDWebUIImageQuickSend.Greeting', name);
   }
 });

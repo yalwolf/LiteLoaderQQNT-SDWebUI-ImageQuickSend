@@ -1,10 +1,10 @@
 {
   "manifest_version": 4,
   "type": "extension",
-  "name": "SDWebUI-ImageQuickSend",
-  "slug": "sdwebui-imagequicksend",
+  "name": "SD图片快捷发送服务",
+  "slug": "LiteLoaderQQNT_SDWebUI_ImageQuickSend",
   "description": "Stable diffusion WebUI 图片快捷发送，支持发送后定时撤回。LiteLoaderQQNT插件。",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": null,
   "authors": [
     {
@@ -13,9 +13,7 @@
     }
   ],
   "platform": [
-    "win32",
-    "linux",
-    "darwin"
+    "win32"
   ],
   "injects": {
     "main": "./main/index.js",
@@ -26,7 +24,7 @@
     "repo": "yalwolf/LiteLoaderQQNT-SDWebUI-ImageQuickSend",
     "branch": "master",
     "release": {
-      "tag": "1.0.0",
+      "tag": "0.0.2",
       "file": "SDWebUIImageQuickSend"
     }
   }

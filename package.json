@@ -1,25 +1,29 @@
 {
   "name": "LiteLoaderQQNT-SDWebUI-ImageQuickSend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Stable diffusion WebUI 图片快捷发送，支持发送后定时撤回。LiteLoaderQQNT插件。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint --fix src/**/* --ext .js,.ts",
-    "build": "npx electron-vite build"
+    "lint": "eslint --fix src/**/* --ext .js,.ts",
+    "build": "electron-vite build"
   },
   "author": "yalwolf",
   "license": "GPL-3.0-only",
   "devDependencies": {
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
     "electron": "^29.1.4",
     "electron-vite": "^2.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.20.1",
     "unplugin-zip-pack": "^1.0.1",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-cp": "^4.0.8"
+  },
+  "dependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1"
   }
 }
