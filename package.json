@@ -1,14 +1,14 @@
 {
-  "name": "lltemplate-vite",
-  "version": "1.0.0",
-  "description": "A plugin template for LiteLoaderQQNT, powered by Vite & Typescript",
+  "name": "LiteLoaderQQNT-SDWebUI-ImageQuickSend",
+  "version": "0.0.1",
+  "description": "Stable diffusion WebUI 图片快捷发送，支持发送后定时撤回。LiteLoaderQQNT插件。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint --fix src/**/* --ext .js,.ts",
     "build": "npx electron-vite build"
   },
-  "author": "MisaLiu",
+  "author": "yalwolf",
   "license": "GPL-3.0-only",
   "devDependencies": {
     "@electron-toolkit/eslint-config-ts": "^1.0.1",

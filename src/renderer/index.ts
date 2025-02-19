@@ -18,7 +18,7 @@ export const onSettingWindowCreated = (view: HTMLElement) => {
   });
 
   (doms.body.querySelector('#template-greet') as HTMLButtonElement).addEventListener('click', () => {
-    LLTemplate_Vite.greeting('Misa');
+    SDWebUIImageQuickSend.greeting('Misa');
   });
 
   doms.body.childNodes.forEach((dom) => {

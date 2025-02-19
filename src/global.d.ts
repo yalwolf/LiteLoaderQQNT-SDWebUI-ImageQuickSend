@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare namespace LLTemplate_Vite {
+declare namespace SDWebUIImageQuickSend {
   const greeting: (name: string) => void;
 }
 
